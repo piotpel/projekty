@@ -3,6 +3,10 @@ from tkinter import font,messagebox
 import datetime
 import requests
 from PIL import Image, ImageTk
+from dotenv import load_dotenv
+import os
+
+
 
 HEIGHT = 500
 WIDTH = 600
@@ -40,7 +44,8 @@ def format_response(weather):
 
 def get_weather(city):  # command for button clicked event
     try:
-        weather_key = '6968405c8a5253523cf3afb394472807'
+        load_dotenv("C:/Users/Piotrek/Desktop/Python/.env.txt")
+        weather_key = os.environ["RA_API_KEY"]
         url = 'https://api.openweathermap.org/data/2.5/forecast'
         params = {'APPID': weather_key, 'q': city, 'units': 'metric'}
         response = requests.get(url, params=params)
