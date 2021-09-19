@@ -45,7 +45,7 @@ def format_response(weather):
 def get_weather(city):  # command for button clicked event
     try:
         load_dotenv("C:/Users/Piotrek/Desktop/Python/.env.txt")
-        weather_key = os.environ["RA_API_KEY"]
+        weather_key = os.environ["WEATHER_KEY"]
         url = 'https://api.openweathermap.org/data/2.5/forecast'
         params = {'APPID': weather_key, 'q': city, 'units': 'metric'}
         response = requests.get(url, params=params)
