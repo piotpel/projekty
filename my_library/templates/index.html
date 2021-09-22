@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body{
+            padding:50px;
+            background-size:cover;
+            background-image: url("https://images.unsplash.com/photo-1510172951991-856a654063f9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80");
+            text-align:center;
+            font-size:20px;
+        }
+        .btn{
+            margin-top:50px;
+            position:relative;
+            right:770px;
+        }
+        h1{
+            position:relative;
+            bottom:15px;
+        }
+    </style>
+</head>
+<body>
+<h1>My Library</h1>
+    {% if all_books|length==0 %}
+        <h2>Library is empty.</h2>
+    {% else %}
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Rating</th>
+                <th scope="col">#</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for book in all_books %}
+                <tr>
+                    <td><a href="{{url_for('delete',id=book.id)}}">Delete</a></td>
+                    <td>{{book.title}}</td>
+                    <td>{{book.author}}</td>
+                    <td>{{book.rating}}/10</td>
+                    <td><a href="{{url_for('edit',id=book.id)}}">Edit Book</a></td>
+                    {% endfor %}
+                </tr>
+    {% endif %}
+            </tbody>
+        </table>
+    <form action="{{url_for('add')}}">
+        <input type="submit"  class="btn btn-outline-dark btn-lg" value="Add new book"></input>
+    </form>
+</body>
+</html>
