@@ -1,0 +1,84 @@
+body {
+  background-color: #CCD1E4;
+}
+
+h1 {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 48px;
+}
+
+.rules {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem;
+}
+
+.user_rules {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  font-size: 24px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.user_rules:hover {
+  background-color: #ccc;
+}
+
+.clicked {
+  background-color: orange;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 3rem;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.user_rules:after {
+  content: '\02795';
+  /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: left;
+  margin-left: 5px;
+}
+
+.clicked:after {
+  content: "\2796";
+  /* Unicode character for "minus" sign (-) */
+}
+
+.glowny-kontener {
+  background-color: #92A9BD;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  border-color: white;
+  border-style: solid;
+  border-width: thick;
+  margin-bottom: 4rem;
+}
+
+ol {
+  text-align: left;
+  font-size: 12px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 0.25rem;
+}

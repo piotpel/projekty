@@ -1,0 +1,135 @@
+body {
+  background-image: url("https://foodtank.com/wp-content/uploads/2021/07/alfons-morales-YLSwjSy7stw-unsplash.jpg");
+}
+
+.glowny-kontener {
+  background-color: #92A9BD;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  overflow-y: scroll;
+  height: 44rem;
+  border-style: double;
+  border-width: thick;
+  border-color: black;
+}
+
+h1 {
+  margin-top: 1rem;
+  font-weight: 800;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+}
+
+.styled-table thead tr {
+  background-color: #295679;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 16px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.openBtn {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+}
+
+.openButton {
+  border: none;
+  border-radius: 5px;
+  background-color: #1c87c9;
+  color: white;
+  padding: 14px 20px;
+  cursor: pointer;
+  position: fixed;
+}
+
+.loginPopup {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.formPopup {
+  display: none;
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, 5%);
+  border: 3px solid white;
+  z-index: 9;
+}
+
+.formContainer {
+  max-width: 300px;
+  padding: 20px;
+  background-color: #92A9BD;
+}
+
+.formContainer input[type=text],
+.formContainer input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 20px 0;
+  border: none;
+  background: #eee;
+}
+
+.formContainer input[type=text]:focus,
+.formContainer input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.formContainer .btn {
+  padding: 12px 20px;
+  border: none;
+  background-color: #8ebf42;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 15px;
+  opacity: 0.8;
+}
+
+.formContainer .cancel {
+  background-color: #cc0000;
+}
+
+.formContainer .btn:hover,
+.openButton:hover {
+  opacity: 1;
+}
+
+input {
+  text-align: center;
+}
