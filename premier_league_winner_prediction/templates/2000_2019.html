@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+{% import "bootstrap/wtf.html" as wtf %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Premier League Prophet</title>
+    <!--    Fonts   -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <!--    script to resize background-->
+    <script type="text/javascript">
+      $(window).on('load resize', function(e){
+      $('.banner').height(parseFloat((300/1300)*$(window).width()));
+      });
+    </script>
+    <style>
+    body{
+        background-image:none;
+        background-color:black;
+        }
+        img{
+        width:700px;
+        height:300px;
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        }
+        p{
+        text-align:center;
+        font-size:25px;
+        color:white;
+        margin-bottom: 6vh;
+        margin-top: 1vh;
+        }
+        .scatter{
+        width:1400px;
+        height:600px;
+        }
+        .pie{
+        width:700px;
+        height:700px;
+        }
+    </style>
+</head>
+<body>
+<!--Navbar-->
+{% include 'header.html' %}
+<!--Main Content-->
+
+<h1 class="upper-h1">Statystyki 2000-2019!</h1>
+<h4 style="margin-bottom:3vw;"> Witaj! Przedstawiam Ci statystyki dotyczące Premier League w latach 2000-2019</h4>
+<br>
+<br>
+<img src="static/img/2000/avg_goals_per_season.png" alt="">
+<p>Średnia liczba strzelonych goli na sezon w latach 2000-2019</p>
+
+<img src="static/img/2000/away_team_points_2000-2019.png" alt="">
+<p>Największa średnia liczba punktów zdobytych w meczach u siebie w latach 2000-2019</p>
+
+<img src="static/img/2000/home_team_points_2000-2019.png" alt="">
+<p>Największa średnia liczba punktów zdobytych w meczach na wyjeździe w latach 2000-2019</p>
+
+<img src="static/img/2000/BEST_home_team_goals_2000-2019.png" alt="">
+<p>Najwięcej strzelonych bramek w meczach u siebie w latach 2000-2019</p>
+
+<img src="static/img/2000/SMALLEST_home_team_goals_2000-2019.png" alt="">
+<p>Najmniej strzelonych bramek w meczach u siebie w latach 2000-2019</p>
+
+<img src="static/img/2000/BEST_away_team_goals_2000-2019.png" alt="">
+<p>Największa średnia liczba bramek zdobytych w meczach na wyjeździe w latach 2000-2019</p>
+
+<img src="static/img/2000/SMALLEST_away_team_goals_2000-2019.png" alt="">
+<p>Najmniejsza średnia liczba bramek zdobytych w meczach na wyjeździe w latach 2000-2019</p>
+
+<img src="static/img/2000/BEST_wins_per_team_2000-2019.png" alt="">
+<p>Najwięcej wygranych meczów w latach 2000-2019</p>
+
+<img src="static/img/2000/SMALLEST_wins_per_team_2000-2019.png" alt="">
+<p>Najmniej wygranych meczów w latach 2000-2019</p>
+
+<img src="static/img/2000/MOST_HOME_DRAWS_per_team_2000-2019.png" alt="">
+<p>Najczęściej remisujące u siebie drużyny w latach 2000-2019</p>
+
+<img src="static/img/2000/SMAlLEST_HOME_DRAWS_per_team_2000-2019.png" alt="">
+<p>Najrzadziej remisujące u siebie drużyny w latach 2000-2019</p>
+
+<img src="static/img/2000/MOST_AWAY_DRAWS_per_team_2000-2019.png" alt="">
+<p>Najczęściej remisujące na wyjeździe drużyny w latach 2000-2019</p>
+
+<img src="static/img/2000/SMAlLEST_AWAY_DRAWS_per_team_2000-2019.png" alt="">
+<p>Najrzadziej remisujące na wyjeździe drużyny w latach 2000-2019</p>
+
+<img src="static/img/2000/BEST_losses_per_team_2000-2019.png" alt="">
+<p>Drużyny które przegrały najwięcej meczów w latach 2000-2019</p>
+
+<img src="static/img/2000/SMALLEST_losses_per_team_2000-2019.png" alt="">
+<p>Drużyny które przegrały najmniej meczów w latach 2000-2019</p>
+
+<img src="static/img/2000/BEST_DRAWS_per_team_2000-2019.png" alt="">
+<p>Drużyny które zremisowały najwięcej meczów w latach 2000-2019</p>
+
+<img src="static/img/2000/SMALLEST_DRAWS_per_team_2000-2019.png" alt="">
+<p>Drużyny które zremisowały najmniej meczów w latach 2000-2019</p>
+
+<img src="static/img/2000/BEST_GOALS_1HALF_per_team_2000-2019.png" alt="">
+<p>Drużyny które strzelały średnio najwięcej bramek w pierwszej połowie meczu w latach 2000-2019</p>
+
+<img src="static/img/2000/SMALLEST_GOALS_1HALF_per_team_2000-2019.png" alt="">
+<p>Drużyny które strzelały średnio najmniej bramek w pierwszej połowie meczu w latach 2000-2019</p>
+
+<img src="static/img/2000/BEST_GOALS_2HALF_per_team_2000-2019.png" alt="">
+<p>Drużyny które strzelały średnio najwięcej bramek w drugiej połowie meczu w latach 2000-2019</p>
+
+<img src="static/img/2000/SMALLEST_GOALS_2HALF_per_team_2000-2019.png" alt="">
+<p>Drużyny które strzelały średnio najmniej bramek w drugiej połowie meczu w latach 2000-2019</p>
+
+<img src="static/img/2000/BEST_FOULS_per_team_2000-2019.png" alt="">
+<p>Drużyny które popełniały średnio najwięcej fauli w jednym meczu w latach 2000-2019</p>
+
+<img src="static/img/2000/BEST_YELLOW_CARDS_per_team_2000-2019.png" alt="">
+<p>Drużyny które otrzymywały średnio najwięcej żółtych kartek w jednym meczu w latach 2000-2019</p>
+
+<img src="static/img/2000/BEST_RED_CARDS_per_team_2000-2019.png" alt="">
+<p>Drużyny które otrzymywały średnio najwięcej czerwonych kartek w jednym meczu w latach 2000-2019</p>
+
+<img class="pie" src="static/img/2000/PIE_percentage_of_draws.png" alt="">
+<p>Procent zremisowanych meczów ogólnie w Premier League w latach 2000-2019</p>
+
+
+<img class="scatter" src="static/img/2000/fouls_yellow_cards_scatter_2000.JPG" alt="">
+<p>Zależnośc pomiędzy liczbą fauli na liczbą żółtych kartek na drużynę w latach 2000-2019</p>
+
+
+</body>
+</html>

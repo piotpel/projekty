@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+{% import "bootstrap/wtf.html" as wtf %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Premier League Prophet</title>
+    <!--    Fonts   -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+<!--    script to resize background-->
+    <script type="text/javascript">
+      $(window).on('load resize', function(e){
+      $('.banner').height(parseFloat((300/1300)*$(window).width()));
+      });
+    </script>
+</head>
+<body>
+<!--Navbar-->
+
+<!--Main Content-->
+        {% include 'header.html' %}
+    <h1 class="upper-h1">Statystyki meczów bezpośrednich</h1>
+    <h4> Wybierz dwie drużyny, a ja podam Ci statystyki dotyczące ich poprzednich spotkań!</h4>
+    <div class="container-fluid main-container bg-#3a3abd rounded">
+
+        {{ wtf.quick_form(form, novalidate=True,button_map={'submit':'light'}) }}
+        <div class="flashes-div">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+            <p>{{ message }}</p>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </div>
+        {%for line in result_message%}
+        <h1 class="lower-h1">{{line}}</h1><br>
+        {%endfor%}
+    </div>
+</body>
+</html>
