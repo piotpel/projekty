@@ -6,9 +6,13 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 import requests
 import time
+import pandas as pd
+import os
 
-CHROME_DRIVER_PATH = "C:/Users/Piotrek/Desktop/Python/chromedriver/chromedriver.exe"
-GOOGLE_SHEET_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSdg30l5U1vz32e91OubP0YC4k0fWMmaUHGhTVbdBcZhPMdcxw/viewform?usp=sf_link"
+CHROME_DRIVER_PATH = os.environ.get("CHROME_DRIVER_PATH")
+GOOGLE_SHEET_LINK = os.environ.get("FLATS_GOOGLE_SHEET_LINK")
+
+
 
 PAGES = 3  # number of search pages returned on website
 
@@ -28,8 +32,13 @@ for i in range(1, PAGES + 1, 1):
     price_info = soup.select(selector=".teaserUnified__price")
     prices += [info.text.strip() for info in price_info]
 
-    links_info = soup.select(selector=".teaserUnified__anchor")
+    links_info = soup.select(selector=".teaserLink")
     links += [link.get("href") for link in links_info]
+
+df = pd.DataFrame(data={'addresses': addresses, 'prices': prices, 'links': links})
+df.index.name = "Id"
+df.to_csv('flats_data.csv')
+
 
 driver = webdriver.Chrome(CHROME_DRIVER_PATH)
 
