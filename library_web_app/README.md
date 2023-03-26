@@ -4,5 +4,6 @@
 - HTML
 - CSS
 - Bootstrap
+- JavaScript
 - PHP
 - MySQL
