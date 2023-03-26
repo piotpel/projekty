@@ -16,3 +16,6 @@ Full list of projects and technologies involved:
 - my_library
 ## Web app created with JavaScript, HTML, CSS, Bootstrap  
 - library_web_app
+## Projects that involves web scraping
+- simple_flask_currency_conventer
+- flat_web_scraping
