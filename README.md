@@ -19,3 +19,4 @@ Full list of projects and technologies involved:
 ## Projects that involves web scraping
 - simple_flask_currency_conventer
 - flat_web_scraping
+## C#, Angular, .NET, SQL Server app - see [Sample Company Website repository](https://github.com/piotpel/SampleCompanyWebsite)
